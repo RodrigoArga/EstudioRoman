@@ -6,8 +6,8 @@
 }
 
 html {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-    margin: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*margin: 5px;*/
     color: rgb(0, 0, 0);
     font-weight: 500;
 }
@@ -16,26 +16,35 @@ html {
 body{
     max-width: 1080px;
     margin: 0 auto;
-    /*background-color: #141853;*/
     background-image: url(../source/img/imagen_oficina.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    
 }
 
 header {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 0, 5fr);
-    background-color: rgba(20, 146, 73, 0.466);
+    background-color: #064e7e;
 }
 
 a {
     text-decoration: none;
     color: rgb(0, 0, 0);
+    font-weight: 500;
 }
 
 .navbar__menu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.navbar__menu li a:hover{
+    color: #ffffff;
+    transition: all .3s ease-in-out;
+    border: 2px solid rgb(0, 0, 0);
 }
 
 .navbar__menu__cursiva {
@@ -48,50 +57,7 @@ a {
     margin: 5px;
     margin-left: 30px;
 }
-
-.main__index__imagen {
-    display: grid;
-    grid-template-rows: repeat(3, 0, 33fr);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-        "img1 img2 img3"
-        "p1   p2   p3"
-    ;
-}
-
-.main__index__imagen1 {
-    grid-area: img1;
-}
-
-.main__index__imagen2 {
-    grid-area: img2;
-}
-
-.main__index__imagen3 {
-    grid-area: img3;
-}
-
-.imagen1__p1 {
-    grid-area: p1;
-}
-
-.imagen2__p2 {
-    grid-area: p2;
-}
-
-.imagen3__p3 {
-    grid-area: p3;
-}
-
-
-.main__index__imagen {
-    width: 100%;
-    margin-top: 100px;
-}
-
-.main__index__imagen p{
-    max-width: 80%;
-}
+/*fin navbar*/
 
 h1 {
     font-size: 25px;
@@ -101,6 +67,93 @@ h1 {
 
 main {
     margin-top: 20px;
+}
+
+h2 {
+    font-size: 25px;
+    color: rgb(2, 2, 2);
+    text-align: left;
+}
+
+
+.article__index{
+    background-image: url(../source/img/background_article.jpg);
+    background-position: center;
+    color: #ffffff;
+    padding: 200px;
+    }
+
+.article__index__title{
+    margin-bottom: 50px;
+    color: #ffffff;
+    transform: translate(0,-100px);
+    }
+
+.article__index__title h1{
+
+    animation: gotitle 4s 2;
+}
+
+.article__index__p{
+    font-size: 20px;
+    transform: translate(0,-100px);
+    
+}
+
+.main__index__imagen {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+        "img1 p1"
+        "img2   p2"
+    ;
+}
+
+.main__index__imagen1 {
+    grid-area: img1;
+    padding: 30px;
+}
+
+.main__index__imagen2 {
+    grid-area: img2;
+    padding: 30px;
+}
+
+.imagen__p1 {
+    grid-area: p1;
+    font-size: larger;
+    font-weight: 60%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 30px;
+    }
+
+.imagen__p2 {
+    grid-area: p2;
+    font-size: larger;
+    font-weight: 60%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 30px;
+      }  
+
+.main__index__imagen {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.main__index__imagen p{
+    max-width: 80%;
+    /*margin-top: 100px;*/
+}
+
+.main__index__imagen img{
+    margin-left: 100px;
+}
+
+.table__section h2{
+   animation-duration: 2s;
+   animation-name: gotitle;
+   animation-iteration-count: infinite
 }
 
 .main__news {
@@ -119,18 +172,12 @@ main {
     text-decoration: underline;
 }
 
-h2 {
-    font-size: 25px;
-    color: rgb(2, 2, 2);
-    text-align: left;
-}
-
-
 footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 15vh;
+    /*background-color: #064e7e;*/
 }
 
 
@@ -151,6 +198,7 @@ li {
 
 .main__nosotros__presentación {
     margin-top: 50px;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,0,33fr);
@@ -158,6 +206,7 @@ li {
     "titulo titulo titulo" 
     "subtitulo1 subtitulo2 subtitulo3 "
     "p1      p2      p3";
+    gap: 10px
 }
 
 .main__nosotros__titulo{
@@ -169,14 +218,17 @@ li {
 
 .main__nosotros__subtitulo1{
     grid-area: subtitulo1;
+    transform: translate(150px);
 }
 
 .main__nosotros__subtitulo2{
     grid-area: subtitulo2;
+    transform: translate(150px);
 }
 
 .main__nosotros__subtitulo3{
     grid-area: subtitulo3;
+    transform: translate(100px);
 }
 
 .main__nosotros__p1{
@@ -193,6 +245,7 @@ li {
 
 .main__nosotros__presentación p{
     margin-top: 50px;
+    background-color: #37a7a76e;
 }
 
 .main__servicios__ofertas{
@@ -241,6 +294,10 @@ li {
     color: black;
 }
 
+.body__contacto{
+    background: linear-gradient(to bottom, #ebebeb, #57e4bc);
+}
+
 .main__contacto__form{
     display: flex;
     flex-direction: row;
@@ -260,7 +317,6 @@ li {
     font-size: 15px;
 }
 
-
 /*RESPONSIVE*/
 @media screen and (max-width: 360px) {
     
@@ -277,24 +333,30 @@ li {
         padding: 10px;
     }
 
+    .article__index__title{
+        margin-top: 100px;
+    }
+
     .main__index__imagen {
-        margin: 5px;
         display: grid;
-        grid-template-rows: repeat(6,1fr);
+        grid-template-rows: repeat(4,1fr);
         grid-template-columns: (1,1fr);
         grid-template-areas:
             "img1" 
             "p1"  
             "img2"
             "p2"   
-            "img3"
-            "p3"
         ;
     }
     
+    .main__index__imagen img{
+        margin: 0%;
+    }
+
     .main__index__imagen1 {
         grid-area: img1;
         max-block-size: 300px;
+        
     }
     
     .main__index__imagen2 {
@@ -303,22 +365,13 @@ li {
     
     }
     
-    .main__index__imagen3 {
-        grid-area: img3;
-        max-block-size: 300px;
-
-    }
-    
+        
     .imagen1__p1 {
         grid-area: p1;
     }
     
     .imagen2__p2 {
         grid-area: p2;
-    }
-    
-    .imagen3__p3 {
-        grid-area: p3;
     }
     
     footer{
@@ -329,6 +382,10 @@ li {
     }
     footer div{
         padding: 8px;
+    }
+
+    .main__nosotros{
+        max-width: 200px;
     }
 
     .main__nosotros__presentación {
@@ -346,6 +403,7 @@ li {
         "subtitulo3 subtitulo3 subtitulo3 "
         "p3      p3      p3"
         ;
+        width: 300px;
     }
     
     .main__nosotros__titulo{
@@ -387,6 +445,10 @@ li {
         margin-top: 50px;
     }
 
+    .main__nosotros__presentación h3{
+     max-width: 50px};
+    }
+
     .table__contenedor {
         font-size: 13px;
     
@@ -413,6 +475,10 @@ li {
        
    }
 
+   .contenedor__imgcontacto img{
+       width: 300px;
+   }
+
    .contenedor__formulario{
        grid-area: formulario;
    }
@@ -425,4 +491,13 @@ li {
        display: flex;
        max-width: 100px;
    }
+}
+
+@keyframes gotitle {
+    0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
 }
