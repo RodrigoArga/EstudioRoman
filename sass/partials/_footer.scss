@@ -1,0 +1,47 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 15vh;
+    .footer__views__ubicación{
+        display: flex;
+        p{
+            font-style: oblique;
+            text-decoration: underline;
+        }
+
+    }
+    .contacto{
+        color: black;
+        text-decoration: underline;
+        list-style: none;
+    }
+    .redes{
+        img{
+            width: 30px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        footer{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 15px;
+            div{
+            padding: 8px;
+            }
+            #footer-fix{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 30px;
+            }
+            #footer-fix ul{
+            padding: 8px;
+            align-items: flex-start;
+            margin: 0%;
+            }
+        }  
+    }
+}              

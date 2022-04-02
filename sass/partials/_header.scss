@@ -1,0 +1,49 @@
+header {
+    background-color: #064e7e;
+    .navbar__menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    li{
+    list-style: none;
+    margin: 5px;
+    margin-left: 30px;    
+    }
+    li a:hover{
+        color: #ffffff;
+        transition: all .3s ease-in-out;
+        border: 2px solid rgb(0, 0, 0);
+    }
+        .navbar__menu__cursiva{
+            font-style: italic;
+            font-weight: bold;
+        }
+    } 
+    
+    @media screen and (max-width: 360px) {
+        .navbar__menu {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-size: 12px;
+        }
+    
+        .navbar__news{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-size: 12px;
+            flex-direction: column;
+        }
+        .navbar__servicios{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-size: 12px;
+            flex-direction: column;    
+        }
+    }
+}   
+
+
+
