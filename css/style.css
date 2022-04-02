@@ -13,6 +13,9 @@ html {
 }
 
 /*FIN NORMALIZE*/
+
+/*Globals*/
+
 body{
     max-width: 1080px;
     margin: 0 auto;
@@ -34,6 +37,45 @@ a {
     color: rgb(0, 0, 0);
     font-weight: 500;
 }
+.footer__views{
+    margin-top: 150px;
+}
+
+.footer__views__ubicación{
+   display: flex;
+   flex-direction:;
+}
+
+.footer__views__ubicación p {
+    font-style: oblique;
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 15vh;
+    /*background-color: #064e7e;*/
+}
+
+
+.contacto {
+    color: black;
+    text-decoration: underline;
+
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+.redes img{
+    width: 30px;
+}
+
+/*Navbar*/
 
 .navbar__menu {
     display: flex;
@@ -58,6 +100,8 @@ a {
     margin-left: 30px;
 }
 /*fin navbar*/
+
+/*Index*/
 
 h1 {
     font-size: 25px;
@@ -87,12 +131,16 @@ h2 {
     margin-bottom: 50px;
     color: #ffffff;
     transform: translate(0,-100px);
+    -webkit-animation-name: gotitle;
+    animation-name: gotitle;
+    -webkit-animation-duration: 3s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: 3;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out; 
     }
 
-.article__index__title h1{
 
-    animation: gotitle 4s 2;
-}
 
 .article__index__p{
     font-size: 20px;
@@ -150,47 +198,34 @@ h2 {
     margin-left: 100px;
 }
 
-.table__section h2{
-   animation-duration: 2s;
-   animation-name: gotitle;
-   animation-iteration-count: infinite
-}
+/*Fin Index*/
+
+/*News*/
 
 .main__news {
     max-width: 80%;
 }
-.table__contenedor{
-    min-height: .01%;
+
+.container{
+    margin: 12px;
+    padding: 12px;
 }
 
-.footer__views{
-    margin-top: 150px;
+.img__news{
+    margin: 0%;
 }
 
-.footer__views__ubicación p {
-    font-style: oblique;
-    text-decoration: underline;
+}
+.footer__views div{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 15vh;
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 15vh;
-    /*background-color: #064e7e;*/
-}
+/*Fin News*/
 
-
-.contacto {
-    color: black;
-    text-decoration: underline;
-
-    list-style: none;
-}
-
-li {
-    list-style: none;
-}
+/*Nosotros*/
 
 .main__nosotros__presentación h2{
     padding-bottom: 70px;
@@ -248,20 +283,39 @@ li {
     background-color: #37a7a76e;
 }
 
-/*news*/
+/*Fin nosotros*/
 
-.img__news{
-    margin-top: 30px;
+/*Contacto*/
+
+.body__contacto{
+    background: linear-gradient(to bottom, #ebebeb, #57e4bc);
+}
+
+.main__contacto__form{
     display: flex;
-    max-width: 500px;
-}
-.img__news img{
-    margin: 10px;
-   max-block-size:300px
-    ;
+    flex-direction: column;
 }
 
+.contenedor__imgcontacto img{
+   width: 800px;
 }
+
+.main__contacto__form__campos{
+    display: flex;
+    flex-direction: column;
+}
+
+.main__contacto__form__campos input{
+    padding: 20px;
+    font-size: 15px;
+}
+.main__contacto__form__campos select{
+    padding: 20px;
+    font-size: 15px;
+}
+
+/*Fin contacto*/
+
 
 /*NAVBAR BOOTSTRAP */
 
@@ -331,39 +385,35 @@ h5{
 
 /*FIN NAVBAR BOOTSTRAP*/
 
-.body__contacto{
-    background: linear-gradient(to bottom, #ebebeb, #57e4bc);
-}
 
-.main__contacto__form{
-    display: flex;
-    flex-direction: row;
-}
-
-.main__contacto__form__campos{
-    display: flex;
-    flex-direction: column;
-}
-
-.main__contacto__form__campos input{
-    padding: 20px;
-    font-size: 15px;
-}
-.main__contacto__form__campos select{
-    padding: 20px;
-    font-size: 15px;
-}
 
 /*RESPONSIVE*/
 @media screen and (max-width: 360px) {
-    
-
     .navbar__menu {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         font-size: 12px;
         
+    }
+
+    .navbar__news{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 12px;
+        flex-direction: column;
+    }
+
+    
+
+    .navbar__servicios{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 12px;
+        flex-direction: column;
+
     }
 
     .article__index{
@@ -419,6 +469,19 @@ h5{
     }
     footer div{
         padding: 8px;
+    }
+    
+    #footer-fix{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+
+    #footer-fix ul{
+        padding: 8px;
+        align-items: flex-start;
+        margin: 0%;
     }
 
     .main__nosotros{
@@ -491,6 +554,10 @@ h5{
     
    }
 
+   .contenedor__imgcontacto img{
+       width: 300px;
+   }
+
    .main__contacto__form{
        display: grid;
        grid-template-columns: (1,1fr);
@@ -512,10 +579,6 @@ h5{
        
    }
 
-   .contenedor__imgcontacto img{
-       width: 300px;
-   }
-
    .contenedor__formulario{
        grid-area: formulario;
    }
@@ -524,17 +587,32 @@ h5{
        display: flex;
        max-width: 100px;
    }
-   .contenedor__imgcontacto{
-       display: flex;
-       max-width: 100px;
-   }
+   
+
+}
+
+/*Fin responsive*/
+
+/*Keyframes*/
+
+@-webkit-keyframes gotitle{
+    0% {
+        opacity: 0;
+        background-color:#064e7e;
+      }
+      100% {
+        opacity: 1;
+        background-color:#064e7e;
+      }
 }
 
 @keyframes gotitle {
     0% {
         opacity: 0;
+        background-color:#064e7e;
       }
       100% {
         opacity: 1;
+        background-color:#064e7e;
       }
 }
