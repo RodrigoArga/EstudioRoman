@@ -174,26 +174,26 @@ footer {
     margin-left: 100px; }
 
 @media screen and (max-width: 360px) {
-  .article__index {
+  .main__index__article {
     padding: 10px; }
-    .article__index .article__title {
+    .main__index__article.main__index__article__h1 {
       margin-top: 100px; }
-    .article__index .main__index__imagen {
+    .main__index__article .main__index__imagen {
       display: grid;
       grid-template-rows: repeat(4, 1fr);
       grid-template-columns: 1, 1fr;
       grid-template-areas: "img1"  "p1"   "img2" "p2"; }
-      .article__index .main__index__imagen .main__index__imagen1 {
+      .main__index__article .main__index__imagen .imagen1 {
         grid-area: img1;
         max-block-size: 300px; }
-      .article__index .main__index__imagen .main__index__imagen2 {
+      .main__index__article .main__index__imagen .imagen2 {
         grid-area: img2;
         max-block-size: 300px; }
-      .article__index .main__index__imagen .imagen__p1 {
+      .main__index__article .main__index__imagen .imagen__p1 {
         grid-area: p1; }
-      .article__index .main__index__imagen .imagen__p2 {
+      .main__index__article .main__index__imagen .imagen__p2 {
         grid-area: p2; }
-      .article__index .main__index__imagen img {
+      .main__index__article .main__index__imagen img {
         margin: 0%; } }
 
 /*FIN VIEWS*/

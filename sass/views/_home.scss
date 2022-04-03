@@ -63,9 +63,9 @@
     }
 
     @media screen and (max-width: 360px) {
-        .article__index{
+        .main__index__article{
             padding: 10px;
-        .article__title{
+        &.main__index__article__h1{
             margin-top: 100px;
         }
     
@@ -78,11 +78,11 @@
                 "p1"  
                 "img2"
                 "p2"  ;
-            .main__index__imagen1 {
+            .imagen1 {
             grid-area: img1;
             max-block-size: 300px;
             }
-            .main__index__imagen2 {
+            .imagen2 {
             grid-area: img2;
             max-block-size: 300px;
             }
