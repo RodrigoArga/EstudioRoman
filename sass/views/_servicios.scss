@@ -1,0 +1,12 @@
+h5 {
+    font-size: 30px;
+    color: white;
+}
+
+@media screen and (max-width: 360px) {
+    .main__servicios__contenedor {
+        margin-bottom: 200px;
+        margin-top: 80px;
+    }
+
+}

@@ -1,101 +1,119 @@
-.main__index{
-    &__article{
+.main__index {
+    &__article {
         background-image: url(../source/img/background_article.jpg);
         background-position: center;
         color: #ffffff;
         padding: 200px;
-        &__h1{
+
+        &__h1 {
             margin-bottom: 50px;
             color: #ffffff;
-            transform: translate(0,-100px);
+            transform: translate(0, -100px);
             -webkit-animation-name: gotitle;
             animation-name: gotitle;
             -webkit-animation-duration: 3s;
             animation-duration: 4s;
             -webkit-animation-iteration-count: 3;
             animation-iteration-count: infinite;
-            -webkit-animation-timing-function: ease-in-out; 
-            }
-        &__p{
-            font-size: 20px;
-            transform: translate(0,-100px);   
+            -webkit-animation-timing-function: ease-in-out;
+
         }
-    }
-    
-    .main__index__imagen{
-            width: 100%;
-            margin-top: 100px;
-            display: grid;
-            grid-template-rows: repeat(2,1fr);
-            grid-template-columns: repeat(2,1fr);
-            grid-template-areas:
-            "img1 p1"
-            "img2   p2";
-            .imagen1{
-                grid-area: img1;
-                padding: 30px;
-            }
-            .imagen2{
-                grid-area: img2;
-                padding: 30px;
-            }
-            .imagen__p1 {
-                grid-area: p1;
-                font-size: larger;
-                font-weight: 60%;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                padding: 30px;
-            }
-            .imagen__p2 {
-                grid-area: p2;
-                font-size: larger;
-                font-weight: 60%;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                padding: 30px;
-            }
-            p{
-                max-width: 80%;  
-            }    
-            img{
-                margin-left: 100px;
-            }
-        }    
+
+        &__p {
+            font-size: 20px;
+            transform: translate(0, -100px);
+        }
     }
 
-    @media screen and (max-width: 360px) {
-        .main__index__article{
-            padding: 10px;
-        &.main__index__article__h1{
-            margin-top: 100px;
+    .main__index__imagen {
+        p {
+            max-width: 80%;
         }
-    
-        .main__index__imagen {
-            display: grid;
-            grid-template-rows: repeat(4,1fr);
-            grid-template-columns: (1,1fr);
-            grid-template-areas:
-                "img1" 
-                "p1"  
-                "img2"
-                "p2"  ;
-            .imagen1 {
+
+        img {
+            margin-left: 100px;
+        }
+
+        width: 100%;
+        margin-top: 100px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "img1 p1"
+        "img2   p2";
+
+        .imagen1 {
             grid-area: img1;
-            max-block-size: 300px;
-            }
-            .imagen2 {
+            padding: 30px;
+        }
+
+        .imagen2 {
             grid-area: img2;
-            max-block-size: 300px;
-            }
-            .imagen__p1 {
+            padding: 30px;
+        }
+
+        .imagen__p1 {
             grid-area: p1;
-            }
-        
-            .imagen__p2 {
+            font-size: larger;
+            font-weight: 60%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 30px;
+        }
+
+        .imagen__p2 {
             grid-area: p2;
+            font-size: larger;
+            font-weight: 60%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 30px;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .main__index {
+        .main__index__article {
+            padding: 10px;
+
+            &__h1 {
+                margin-top: 100px;
             }
-             img{
-            margin: 0%;
+        }
+
+        .main__index__imagen {
+            img {
+                margin: 0%;
             }
+
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: (1fr);
+            grid-template-areas: "img1"
+            "p1"
+            "img2"
+            "p2";
+
+            .imagen1 {
+                grid-area: img1;
+                max-block-size: 300px;
+            }
+
+            .imagen2 {
+                grid-area: img2;
+                max-block-size: 300px;
+            }
+
+            .imagen__p1 {
+                grid-area: p1;
+            }
+
+            .imagen__p2 {
+                grid-area: p2;
+            }
+
         }
     }
+
 }

@@ -3,6 +3,8 @@
 /*MISC*/
 @import "./misc/normalize";
 @import "./misc/animations";
+@import "./misc/mixins";
+@import "./misc/variables";
 /*FIN MISC*/
 
 
@@ -13,6 +15,35 @@
 
 /*VIEWS*/
 @import "./views/home";
+@import "./views/nosotros";
+@import "./views/news";
+@import "./views/servicios";
+@import "./views/contacto";
 /*FIN VIEWS*/
 
+h2{
+    @include titulos();
+    background-color: map-get($backscol , secondary)
+}
+h1{
+    @include titulos();
+}
+header{
+    background-color: map-get($backscol, primary);
+}
+h5{
+    background-color: map-get($backscol, secondary);
+}
+.encabezado__form{
+    h2{
+        background-color: map-get($backscol , tertiary);
+    }
+}
+.main__nosotros__presentación p{
+    background-color: map-get($backscol, paragraph );
+}
+
+
+
+   
 
