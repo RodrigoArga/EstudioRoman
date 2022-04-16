@@ -11,7 +11,7 @@ header {
         }
 
         li a:hover {
-            color: #ffffff;
+            color: #064e7e;
             transition: all .3s ease-in-out;
             border: 2px solid rgb(0, 0, 0);
         }
@@ -24,6 +24,10 @@ header {
 
     .navbar__news {
         max-height: 130px;
+
+        ul {
+            padding: 0%
+        }
     }
 
     .navbar__menu__news {
@@ -33,10 +37,11 @@ header {
             list-style: none;
             margin: 5px;
             margin-left: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
         li a:hover {
-            color: #ffffff;
+            color: #064e7e;
             transition: all .3s ease-in-out;
             border: 2px solid rgb(0, 0, 0);
         }
@@ -49,6 +54,10 @@ header {
 
     .navbar__servicios {
         max-height: 130px;
+
+        ul {
+            padding: 0%
+        }
     }
 
     .navbar__menu__servicios {
@@ -61,7 +70,7 @@ header {
         }
 
         li a:hover {
-            color: #ffffff;
+            color: #064e7e;
             transition: all .3s ease-in-out;
             border: 2px solid rgb(0, 0, 0);
         }

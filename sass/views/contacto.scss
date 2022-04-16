@@ -20,46 +20,91 @@
                 font-size: 15px;
             }
 
+            label {
+                margin-top: 20px;
+            }
+
             select {
                 padding: 20px;
                 font-size: 15px;
+                margin-top: 20px;
             }
         }
     }
+}
 
-    @media screen and (max-width: 360px) {
+
+@media screen and (max-width: 720px) {
+    .body__contacto {
+        background: linear-gradient(to bottom, #ebebeb, #57e4bc);
 
         .main__contacto__form {
-            display: grid;
-            grid-template-columns: (1, 1fr);
-            grid-template-rows: repeat(3, 0, 33fr);
-            grid-template-areas:
-                "titulo"
-                "img"
-                "formulario"
-            ;
+            display: flex;
+            flex-direction: column;
 
-            .encabezado__form {
-                grid-area: titulo;
+            img {
+                width: 400px;
+            }
+        }
 
-                h2 {
-                    display: flex;
+
+        .contenedor__formulario {
+            .main__contacto__form__campos {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    padding: 20px;
+                    font-size: 15px;
+                }
+
+                label {
+                    margin-top: 10px;
+                }
+
+                select {
+                    padding: 20px;
+                    font-size: 15px;
+                    margin-top: 10px;
                 }
             }
+        }
+    }
+}
 
-            .contenedor__imgcontacto {
-                grid-area: img;
-            }
+@media screen and (max-width: 360px) {
+    .body__contacto {
+        background: linear-gradient(to bottom, #ebebeb, #57e4bc);
 
-            .main__contacto__form__img {
-                img {
-                    width: 300px;
-                }
+        .main__contacto__form {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 300px;
             }
         }
 
         .contenedor__formulario {
-            grid-area: formulario;
+            .main__contacto__form__campos {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    padding: 20px;
+                    font-size: 15px;
+                }
+
+                label {
+                    margin-top: 10px;
+                }
+
+                select {
+                    padding: 20px;
+                    font-size: 15px;
+                    margin-top: 10px;
+                }
+            }
         }
     }
 }
