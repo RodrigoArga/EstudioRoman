@@ -41,6 +41,12 @@ footer {
     }
 }
 
+@media screen and (max-width: 720px){
+    #footer__main{
+        margin-top: 100px;
+    }
+}
+
 @media screen and (max-width: 360px) {
     footer {
         display: flex;
@@ -74,5 +80,13 @@ footer {
         margin: 0%;
     }
 
-
+    #footer__main{
+        margin-top: 220px;
+    }
 }
+
+
+
+
+
+

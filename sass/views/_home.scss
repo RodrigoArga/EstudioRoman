@@ -71,7 +71,6 @@
     }
 }
 
-
 @media screen and (max-width: 360px) {
     .main__index {
         .main__index__article {
@@ -80,15 +79,20 @@
             &__h1 {
                 margin-top: 100px;
             }
+
+            &__p {
+                font-size: 18px;
+            }
         }
 
         .main__index__imagen {
             img {
                 margin: 0%;
+                width: 100%;
             }
 
             display: grid;
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 0.5fr);
             grid-template-columns: (1fr);
             grid-template-areas: "img1"
             "p1"
@@ -98,26 +102,22 @@
             .imagen1 {
                 grid-area: img1;
                 max-block-size: 200px;
-                padding: 0%;
-                margin-bottom: 10px;
             }
 
             .imagen2 {
                 grid-area: img2;
                 max-block-size: 200px;
-                padding: 0%;
-                margin-bottom: 10px;
-                
+                margin-top: 100px;
             }
 
             .imagen__p1 {
                 grid-area: p1;
-                margin-bottom: 30px;
+                font-size: 18px;
             }
 
             .imagen__p2 {
                 grid-area: p2;
-                margin-bottom: 50px;
+                font-size: 18px;
             }
 
         }
@@ -125,21 +125,26 @@
 
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 720px){
     .main__index {
         .main__index__article {
             padding: 10px;
-
+    
             &__h1 {
                 margin-top: 100px;
             }
-        }
 
+            &__p {
+                font-size: 20px;
+            }
+        }
+    
         .main__index__imagen {
             img {
                 margin: 0%;
+                width: 100%;
             }
-
+    
             display: grid;
             grid-template-rows: repeat(4, 0.50fr);
             grid-template-columns: (1fr);
@@ -147,27 +152,30 @@
             "p1"
             "img2"
             "p2";
-
+    
             .imagen1 {
                 grid-area: img1;
                 max-block-size: 400px;
             }
-
+    
             .imagen2 {
                 grid-area: img2;
                 max-block-size: 400px;
             }
-
+    
             .imagen__p1 {
                 grid-area: p1;
                 max-block-size: 200px;
+                margin-bottom: 80px;
             }
-
+    
             .imagen__p2 {
                 grid-area: p2;
                 max-block-size: 200px;
+                margin-bottom: 80px;
             }
-
+    
         }
     }
 }
+

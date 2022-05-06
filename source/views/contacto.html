@@ -41,15 +41,16 @@
             </div>
         </section>
         <section class="contenedor__formulario">
-            <form class="main__contacto__form__campos" action="" method="post" enctype="">
-                <input type="text" name="Nombre" id="" placeholder="Nombre">
-                <input type="text" name="Teléfono" id="" placeholder="Teléfono">
-                <input type="email" name="Email" id="" placeholder="Email">
+            <form class="main__contacto__form__campos">
+                <input type="text" name="Nombre" id="" placeholder="Nombre" required>
+                <input type="text" name="Teléfono" id="" placeholder="Teléfono" required>
+                <input type="email" name="Email" id="" placeholder="Email" required>
                 <label for="Tipo de consulta">Tipo de Consulta</label>
                 <select name="Tipo de consulta" id="Tipo de consulta">
                     <option value="Particular">Particular</option>
                     <option value="Empresa">Empresa</option>
                 </select>
+                <input class="send" type="submit" value="ENVIAR">
             </form>
         </section>
     </main>

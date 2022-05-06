@@ -95,6 +95,7 @@ header {
             justify-content: flex-start;
             align-items: flex-start;
             font-size: 12px;
+            flex-direction: column;
         }
 
         .navbar__news {
@@ -103,6 +104,10 @@ header {
             align-items: flex-start;
             font-size: 12px;
             flex-direction: column;
+            max-height: 230px;
+            ul{
+                flex-direction: column;
+            }
         }
 
         .navbar__servicios {
@@ -111,7 +116,11 @@ header {
             align-items: flex-start;
             font-size: 12px;
             flex-direction: column;
-            max-width: 300px;
+            max-width: 280px;
+            max-height: 230px;
+            ul{
+                flex-direction: column;
+            }
         }
     }
 }

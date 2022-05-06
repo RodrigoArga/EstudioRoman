@@ -3,11 +3,22 @@
     padding: 12px;
 }
 
+.class__container{
+    justify-content: center;
+    align-items: center;
+}
+
 .img__news {
     padding: 0%;
-    margin: 0%;
+    margin: 1rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 360px) {
