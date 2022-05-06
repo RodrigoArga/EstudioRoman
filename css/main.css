@@ -398,6 +398,10 @@ h5 {
   h5 {
     font-size: 15px; } }
 
+@media screen and (max-width: 720px) {
+  h5 {
+    font-size: 20px; } }
+
 .body__contacto {
   background: linear-gradient(to bottom, #ebebeb, #57e4bc); }
   .body__contacto .main__contacto__form {
