@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (gasto > 0 && gasto > ahorroTotal) {
             ahorroTotal -= gasto
             alert(` tus gastos estan superando tus ingresos!! tendrás que endeudarte para cubrirlos! tu saldo es de ${ahorroTotal}`)
+            let parrafoAlerta = document.createElement('p')
+            parrafoAlerta.innerHTML = '<p> Debes administrar mejor tu dinero, en tus ultimas entradas tus gastos fueron superiores a tus ingresos </p>'
+            let fraseDestino = document.getElementById('fraseAlerta')
+            fraseDestino.append(parrafoAlerta)
         }
     }
 
@@ -64,6 +68,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 }
             }
+            let parrafoFinal = document.createElement('p')
+            parrafoFinal.innerHTML = '<p>Si te gustó la app nos ayudas compartiendo el enlace para seguir creciendo!!,gracias ' + user + ' </p>'
+            let parrafoDestino = document.getElementById('fraseDespedida')
+            parrafoDestino.append(parrafoFinal)
             break
         } else {
             alert('contraseña incorrecta le quedan ' + (3 - i) + ' intentos')
