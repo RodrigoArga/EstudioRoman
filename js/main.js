@@ -36,6 +36,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    let btn = document.getElementById('sendButton')
+
+    btn.addEventListener('click', (e) => { 
+        alert('enviado!')
+        e.preventDefault()
+    })
+    const valorado = () => {
+        let pValoracion = document.createElement('p')
+        pValoracion.innerHTML = '<p> Tu valoración fué registrada con éxito </p>'
+        document.getElementById('divValoracion').append(pValoracion)
+    }
+    btn.addEventListener('click', valorado)
+
+
+
     for (let i = 1; i <= 3; i++) {
         let user = prompt('ingrese su usuario: ')
         let pass = prompt('ingrese su contraseña: ')
@@ -77,4 +92,5 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('contraseña incorrecta le quedan ' + (3 - i) + ' intentos')
         }
     }
-}, false); 
+
+}, false);
