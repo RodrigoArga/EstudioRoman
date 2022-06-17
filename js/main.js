@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('divValoracion').append(pValoracion)
     }
     btn.addEventListener('click', valorado)
+    
 
 
 
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let validacion = validarUserYPass(user, pass)
         if (validacion) {
             alert('Bienvenidos a Savings Managament')
+            localStorage.setItem('usuariosActivos',JSON.stringify(user))
             while (funcionDatos) {
                 data = prompt('escriba "Consultar" para consultar su disponibilidad de dinero,\n"Registrar ganancia" , \n"Registrar gasto",\n"clasificar" para clasificar gastos y ganancias, \n"Terminar" para finalizar')
                 if (data == 'Consultar') {
