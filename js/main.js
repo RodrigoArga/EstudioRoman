@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+
     function esGasto(gasto) {
         if (gasto > 0 && gasto < ahorroTotal) {
             ahorroTotal -= gasto
@@ -29,16 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function validarUserYPass(user, pass) {
-        if (user == usuario && pass == password) {
-            return true
-        } else {
-            return false
-        }
+        return (user == usuario && pass == password) ? true : false
     }
+
 
     let btn = document.getElementById('sendButton')
 
-    btn.addEventListener('click', (e) => { 
+    btn.addEventListener('click', (e) => {
         alert('enviado!')
         e.preventDefault()
     })
@@ -48,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('divValoracion').append(pValoracion)
     }
     btn.addEventListener('click', valorado)
-    
+
 
 
 
@@ -58,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let validacion = validarUserYPass(user, pass)
         if (validacion) {
             alert('Bienvenidos a Savings Managament')
-            localStorage.setItem('usuariosActivos',JSON.stringify(user))
+            localStorage.setItem('usuariosActivos', JSON.stringify(user))
             while (funcionDatos) {
                 data = prompt('escriba "Consultar" para consultar su disponibilidad de dinero,\n"Registrar ganancia" , \n"Registrar gasto",\n"clasificar" para clasificar gastos y ganancias, \n"Terminar" para finalizar')
                 if (data == 'Consultar') {
@@ -91,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
             parrafoDestino.append(parrafoFinal)
             break
         } else {
-            alert('contraseña incorrecta le quedan ' + (3 - i) + ' intentos')
+            alert('usuario o contraseña incorrectos le quedan ' + (3 - i) + ' intentos')
         }
     }
 
