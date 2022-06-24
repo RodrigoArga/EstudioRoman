@@ -6,48 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../css/main.css"> 
-</head> 
-    <body>
-        <header>
-            <nav class="navbar">
-                <a class="navbar__logo" href="../../index.html"><img src="../img/logo.png" alt="logo lorem ipsum"></a>
-                <ul class="navbar__menu">
-                    <li>
-                        <a class="navbar__menu__cursiva" href="index.html">Inicio</a></li>
-                    <li>
-                        <a class="navbar__menu__2" href="nosotros.html">Nosotros</a></li>
-                    <li>
-                        <a class="navbar__menu__3" href="servicios.html">Servicios</a></li>
-                    <li>
-                        <a class="navbar__menu__4" href="news.html">News</a></li>
-                </ul>
-            </nav>
-        </header>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar__logo" href="../../index.html"><img src="../img/logo.png" alt="logo lorem ipsum"></a>
+            <ul class="navbar__menu">
+                <li>
+                    <a class="navbar__menu__cursiva" href="index.html">Inicio</a></li>
+                <li>
+                    <a class="navbar__menu__2" href="nosotros.html">Nosotros</a></li>
+                <li>
+                    <a class="navbar__menu__3" href="servicios.html">Servicios</a></li>
+                <li>
+                    <a class="navbar__menu__4" href="news.html">News</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <h1>Savings Managament</h1>
-    <div>
-        <h2>Simplificamos la administración de tu dinero</h2>
-    </div>
-    <div>
-        <h2 id="tituloBienvenido"></h2>
-    </div>
-    <p id="fraseAlerta"></p>
-    <p id="fraseDespedida"></p>
-    <div id="divValoracion">
-        <p>Valorando la app nos ayudas a mejorar</p>
-        <form>
-            <label for="Valorar">VALORAR</label>
-            <select name="Rangos" id="Rangos">
-                <option value="Muy buena">Muy Buena</option>
-                <option value="Buena">Buena</option>
-                <option value="Mala">Mala</option>
-            </select>
-            <button id="sendButton">ENVIAR</button>
-        </form>
-    </div>
-</main>
-<script src="../../js/main.js"></script>
-    </body>
+        <div>
+            <h2>Simplificamos la administración de tu dinero</h2>
+        </div>
+        <div>
+            <h2 id="tituloBienvenido"></h2>
+        </div>
+        <p id="fraseAlerta"></p>
+        <p id="fraseDespedida"></p>
+        <div id="divValoracion">
+            <p>Valorando la app nos ayudas a mejorar</p>
+            <form>
+                <label for="Valorar">VALORAR</label>
+                <select name="Rangos" id="Rangos">
+                    <option value="Muy buena">Muy Buena</option>
+                    <option value="Buena">Buena</option>
+                    <option value="Mala">Mala</option>
+                </select>
+                <button id="sendButton">ENVIAR</button>
+            </form>
+        </div>
+    </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../../js/main.js"></script>
+</body>
 
 </html>

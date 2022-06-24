@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded',()=>{
     let usuario = 'Rodrigo'
     let password = 678
     let ahorroTotal = 0
@@ -37,7 +37,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let btn = document.getElementById('sendButton')
 
     btn.addEventListener('click', (e) => {
-        alert('enviado!')
+        Toastify({
+            text: "VALORACION ENVIADA",
+            offset: {
+              x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+              y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            },
+          }).showToast();
         e.preventDefault()
     })
     const valorado = () => {
@@ -55,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let pass = prompt('ingrese su contraseña: ')
         let validacion = validarUserYPass(user, pass)
         if (validacion) {
-            alert('Bienvenidos a Savings Managament')
+            Swal.fire('Any fool can use a computer')
             localStorage.setItem('usuariosActivos', JSON.stringify(user))
             while (funcionDatos) {
                 data = prompt('escriba "Consultar" para consultar su disponibilidad de dinero,\n"Registrar ganancia" , \n"Registrar gasto",\n"clasificar" para clasificar gastos y ganancias, \n"Terminar" para finalizar')
@@ -93,4 +99,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-}, false);
+})
