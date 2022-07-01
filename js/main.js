@@ -61,8 +61,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         let pass = prompt('ingrese su contraseña: ')
         let validacion = validarUserYPass(user, pass)
         if (validacion) {
-            Swal.fire('Any fool can use a computer')
-            localStorage.setItem('usuariosActivos', JSON.stringify(user))
+            alert('Bienvenido a Savings Managament')
             while (funcionDatos) {
                 data = prompt('escriba "Consultar" para consultar su disponibilidad de dinero,\n"Registrar ganancia" , \n"Registrar gasto",\n"clasificar" para clasificar gastos y ganancias, \n"Terminar" para finalizar')
                 if (data == 'Consultar') {
@@ -97,6 +96,24 @@ document.addEventListener('DOMContentLoaded',()=>{
         } else {
             alert('usuario o contraseña incorrectos le quedan ' + (3 - i) + ' intentos')
         }
+    }
+
+    //APLICACIÓN FETCH Y JSON
+
+    let url = 'https://jsonplaceholder.typicode.com/users/';
+    fetch(url)
+        .then( response => response.json() )
+        .then( data => mostrarData(data) )
+        .catch( error => console.log(error) )
+
+    const mostrarData = (data) => {
+        console.log(data)
+        let body = ""
+        for (var i = 0; i < data.length; i++) {      
+           body+=`<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].email}</td></tr>`
+        }
+        document.getElementById('data').innerHTML = body
+        //console.log(body)
     }
 
 })
